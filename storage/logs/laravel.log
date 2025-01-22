@@ -1194,3 +1194,21 @@ into your web browser: <span class="break-all" style="box-sizing: border-box; fo
 </html>
 --pwNusIdw--
   
+[2025-01-22 06:25:54] local.ERROR: There is no existing directory at "/Users/ashokpoudel/Documents/Cyber Security/Api-Based-Spam-Detection/storage/logs" and it could not be created: Permission denied {"exception":"[object] (UnexpectedValueException(code: 0): There is no existing directory at \"/Users/ashokpoudel/Documents/Cyber Security/Api-Based-Spam-Detection/storage/logs\" and it could not be created: Permission denied at C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\vendor\\monolog\\monolog\\src\\Monolog\\Handler\\StreamHandler.php:241)
+[stacktrace]
+#0 C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\vendor\\monolog\\monolog\\src\\Monolog\\Handler\\StreamHandler.php(141): Monolog\\Handler\\StreamHandler->createDir()
+#1 C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\vendor\\monolog\\monolog\\src\\Monolog\\Handler\\AbstractProcessingHandler.php(44): Monolog\\Handler\\StreamHandler->write()
+#2 C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\vendor\\monolog\\monolog\\src\\Monolog\\Logger.php(391): Monolog\\Handler\\AbstractProcessingHandler->handle()
+#3 C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\vendor\\monolog\\monolog\\src\\Monolog\\Logger.php(646): Monolog\\Logger->addRecord()
+#4 C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\Logger.php(184): Monolog\\Logger->error()
+#5 C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\Logger.php(97): Illuminate\\Log\\Logger->writeLog()
+#6 C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(701): Illuminate\\Log\\Logger->error()
+#7 C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(380): Illuminate\\Log\\LogManager->error()
+#8 C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(343): Illuminate\\Foundation\\Exceptions\\Handler->reportThrowable()
+#9 C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php(46): Illuminate\\Foundation\\Exceptions\\Handler->report()
+#10 C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(621): NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler->report()
+#11 C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(200): Illuminate\\Foundation\\Console\\Kernel->reportException()
+#12 C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1208): Illuminate\\Foundation\\Console\\Kernel->handle()
+#13 C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\artisan(13): Illuminate\\Foundation\\Application->handleCommand()
+#14 {main}
+"} 

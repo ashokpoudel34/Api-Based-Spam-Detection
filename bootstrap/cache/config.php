@@ -1,9 +1,9 @@
 <?php return array (
-  0 => 'hashing',
-  8 => 'concurrency',
-  10 => 'broadcasting',
-  11 => 'view',
-  12 => 'cors',
+  2 => 'broadcasting',
+  4 => 'concurrency',
+  5 => 'cors',
+  8 => 'hashing',
+  14 => 'view',
   'app' => 
   array (
     'name' => 'Laravel',
@@ -158,8 +158,8 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => '/Users/ashokpoudel/Documents/Cyber Security/Api-Based-Spam-Detection/storage/framework/cache/data',
-        'lock_path' => '/Users/ashokpoudel/Documents/Cyber Security/Api-Based-Spam-Detection/storage/framework/cache/data',
+        'path' => 'C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\storage\\framework/cache/data',
+        'lock_path' => 'C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -229,7 +229,7 @@
         'port' => '3306',
         'database' => 'spam',
         'username' => 'cyber',
-        'password' => 'password',
+        'password' => '8848',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -249,7 +249,7 @@
         'port' => '3306',
         'database' => 'spam',
         'username' => 'cyber',
-        'password' => 'password',
+        'password' => '8848',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -269,7 +269,7 @@
         'port' => '3306',
         'database' => 'spam',
         'username' => 'cyber',
-        'password' => 'password',
+        'password' => '8848',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -284,7 +284,7 @@
         'port' => '3306',
         'database' => 'spam',
         'username' => 'cyber',
-        'password' => 'password',
+        'password' => '8848',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -331,14 +331,14 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => '/Users/ashokpoudel/Documents/Cyber Security/Api-Based-Spam-Detection/storage/app/private',
+        'root' => 'C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\storage\\app/private',
         'serve' => true,
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => '/Users/ashokpoudel/Documents/Cyber Security/Api-Based-Spam-Detection/storage/app/public',
+        'root' => 'C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -358,7 +358,7 @@
     ),
     'links' => 
     array (
-      '/Users/ashokpoudel/Documents/Cyber Security/Api-Based-Spam-Detection/public/storage' => '/Users/ashokpoudel/Documents/Cyber Security/Api-Based-Spam-Detection/storage/app/public',
+      'C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\public\\storage' => 'C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\storage\\app/public',
     ),
   ),
   'logging' => 
@@ -383,14 +383,14 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => '/Users/ashokpoudel/Documents/Cyber Security/Api-Based-Spam-Detection/storage/logs/laravel.log',
+        'path' => 'C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\storage\\logs/laravel.log',
         'level' => 'debug',
         'replace_placeholders' => true,
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => '/Users/ashokpoudel/Documents/Cyber Security/Api-Based-Spam-Detection/storage/logs/laravel.log',
+        'path' => 'C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
         'replace_placeholders' => true,
@@ -455,7 +455,7 @@
       ),
       'emergency' => 
       array (
-        'path' => '/Users/ashokpoudel/Documents/Cyber Security/Api-Based-Spam-Detection/storage/logs/laravel.log',
+        'path' => 'C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -531,7 +531,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => '/Users/ashokpoudel/Documents/Cyber Security/Api-Based-Spam-Detection/resources/views/vendor/mail',
+        0 => 'C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -626,7 +626,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => '/Users/ashokpoudel/Documents/Cyber Security/Api-Based-Spam-Detection/storage/framework/sessions',
+    'files' => 'C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -642,27 +642,6 @@
     'http_only' => true,
     'same_site' => 'lax',
     'partitioned' => false,
-  ),
-  'hashing' => 
-  array (
-    'driver' => 'bcrypt',
-    'bcrypt' => 
-    array (
-      'rounds' => '12',
-      'verify' => true,
-    ),
-    'argon' => 
-    array (
-      'memory' => 65536,
-      'threads' => 1,
-      'time' => 4,
-      'verify' => true,
-    ),
-    'rehash_on_login' => true,
-  ),
-  'concurrency' => 
-  array (
-    'default' => 'process',
   ),
   'broadcasting' => 
   array (
@@ -720,13 +699,9 @@
       ),
     ),
   ),
-  'view' => 
+  'concurrency' => 
   array (
-    'paths' => 
-    array (
-      0 => '/Users/ashokpoudel/Documents/Cyber Security/Api-Based-Spam-Detection/resources/views',
-    ),
-    'compiled' => '/Users/ashokpoudel/Documents/Cyber Security/Api-Based-Spam-Detection/storage/framework/views',
+    'default' => 'process',
   ),
   'cors' => 
   array (
@@ -755,6 +730,31 @@
     ),
     'max_age' => 0,
     'supports_credentials' => false,
+  ),
+  'hashing' => 
+  array (
+    'driver' => 'bcrypt',
+    'bcrypt' => 
+    array (
+      'rounds' => '12',
+      'verify' => true,
+    ),
+    'argon' => 
+    array (
+      'memory' => 65536,
+      'threads' => 1,
+      'time' => 4,
+      'verify' => true,
+    ),
+    'rehash_on_login' => true,
+  ),
+  'view' => 
+  array (
+    'paths' => 
+    array (
+      0 => 'C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\resources\\views',
+    ),
+    'compiled' => 'C:\\Users\\2403032010047\\Documents\\Api-Based-Spam-Detection\\storage\\framework\\views',
   ),
   'tinker' => 
   array (
