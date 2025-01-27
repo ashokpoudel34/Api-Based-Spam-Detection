@@ -30,6 +30,8 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/api-keys/{id}', [ApiKeyController::class, 'revoke'])->name('api_keys.revoke');
 });
 
+Route::post('/detect-spam', [ApiKeyController::class, 'detectSpam']);
+
 
 
 require __DIR__.'/auth.php';

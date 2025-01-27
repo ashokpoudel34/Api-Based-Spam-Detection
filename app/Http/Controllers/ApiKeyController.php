@@ -30,5 +30,21 @@ class ApiKeyController extends Controller
         ApiKey::where('key', $id)->delete();
         return redirect()->back()->with('success', 'API Key revoked');
     }
+
+    public function detectSpam(Request $request)
+    {
+        $apiKey = $request->header('API-Key');
+        $text = $request->input('text');
+
+        // Validate the API key by checking if it exists in the table
+        $validApiKey = ApiKey::where('key', $apiKey)->first();
+
+        if (!$validApiKey) {
+            return response()->json(['error' => 'Invalid API key'], 401);
+        }
+
+        // For now, just return a success message
+        return response()->json(['message' => 'API key used successfully']);
+    }
 }
 
