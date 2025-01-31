@@ -33,8 +33,8 @@ class ApiKeyController extends Controller
 
     public function detectSpam(Request $request)
     {
-        $apiKey = $request->header('API-Key');
-        $text = $request->input('text');
+        $apiKey = $request->query('API-Key');
+        $text = $request->query('text');
 
         // Validate the API key by checking if it exists in the table
         $validApiKey = ApiKey::where('key', $apiKey)->first();
