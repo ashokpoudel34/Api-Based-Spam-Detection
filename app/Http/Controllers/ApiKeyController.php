@@ -43,8 +43,10 @@ class ApiKeyController extends Controller
             return response()->json(['error' => 'Invalid API key'], 401);
         }
 
+        $whoisOutput = shell_exec("whois " . escapeshellarg($text));
+
         // For now, just return a success message
-        return response()->json(['message' => 'API key used successfully']);
+        return response()->json(['whois_output' => $whoisOutput]);
     }
 }
 
