@@ -52,7 +52,6 @@ class ApiKeyController extends Controller
                 $host = $text;
             }
             $output = shell_exec("whois " . escapeshellarg($host));
-            $formattedOutput = nl2br($output);
         }elseif($currentRouteUri == 'nmap'){
             $parsedUrl = parse_url($text);
             if (isset($parsedUrl['host'])) {
@@ -61,7 +60,6 @@ class ApiKeyController extends Controller
                 $host = $text;
             }
             $output = shell_exec("nmap -F -Pn " . escapeshellarg($host));
-            $formattedOutput = nl2br($output);
         }elseif($currentRouteUri == 'nslookup'){
             $parsedUrl = parse_url($text);
             if (isset($parsedUrl['host'])) {
@@ -70,10 +68,9 @@ class ApiKeyController extends Controller
                 $host = $text;
             }
             $output = shell_exec("nslookup " . escapeshellarg($host));
-            $formattedOutput = nl2br($output);
         }
         // For now, just return a success message
-        return response()->json([$formattedOutput]);
+        return response()->json([$output]);
     }
 
 }
