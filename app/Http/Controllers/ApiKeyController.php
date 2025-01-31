@@ -68,6 +68,14 @@ class ApiKeyController extends Controller
                 $host = $text;
             }
             $output = shell_exec("nslookup " . escapeshellarg($host));
+        }elseif($currentRouteUri == 'harvestor'){
+            $parsedUrl = parse_url($text);
+            if (isset($parsedUrl['host'])) {
+                $host = $parsedUrl['host'];
+            } else {
+                $host = $text;
+            }
+            $output = shell_exec("theHarvester -b bing,yahoo,rapiddns,crtsh -d  " . escapeshellarg($host));
         }
         // For now, just return a success message
         return response()->json([$output]);
