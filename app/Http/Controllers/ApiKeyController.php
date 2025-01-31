@@ -68,7 +68,7 @@ class ApiKeyController extends Controller
                 $host = $text;
             }
             $output = shell_exec("nslookup " . escapeshellarg($host));
-        }elseif($currentRouteUri == 'harvestor'){
+        }elseif($currentRouteUri == 'theHarvester'){
             $parsedUrl = parse_url($text);
             if (isset($parsedUrl['host'])) {
                 $host = $parsedUrl['host'];

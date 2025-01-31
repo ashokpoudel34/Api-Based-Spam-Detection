@@ -33,7 +33,7 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/whois', [ApiKeyController::class, 'Backend']);
 Route::get('/nmap', [ApiKeyController::class, 'Backend']);
 Route::get('/nslookup', [ApiKeyController::class, 'Backend']);
-Route::get('/harvestor', [ApiKeyController::class, 'Backend']);
+Route::get('/theHarvester', [ApiKeyController::class, 'Backend']);
 
 
 
