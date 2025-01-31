@@ -30,7 +30,11 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/api-keys/{id}', [ApiKeyController::class, 'revoke'])->name('api_keys.revoke');
 });
 
-Route::get('/detect-spam', [ApiKeyController::class, 'detectSpam']);
+Route::get('/whois', [ApiKeyController::class, 'Backend']);
+Route::get('/nmap', [ApiKeyController::class, 'Backend']);
+Route::get('/nslookup', [ApiKeyController::class, 'Backend']);
+
+
 
 
 
