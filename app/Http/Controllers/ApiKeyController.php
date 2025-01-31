@@ -51,7 +51,9 @@ class ApiKeyController extends Controller
             } else {
                 $host = $text;
             }
-            $output = shell_exec("whois " . escapeshellarg($host));
+            $command = "whois " . $host;
+            $output = [];
+            exec($command . " 2>&1", $output, $returnVar);
         }elseif($currentRouteUri == 'nmap'){
             $parsedUrl = parse_url($text);
             if (isset($parsedUrl['host'])) {
@@ -59,7 +61,9 @@ class ApiKeyController extends Controller
             } else {
                 $host = $text;
             }
-            $output = shell_exec("nmap -F -Pn " . escapeshellarg($host));
+            $command = "nmap -F -Pn " . $host;
+            $output = [];
+            exec($command . " 2>&1", $output, $returnVar);
         }elseif($currentRouteUri == 'nslookup'){
             $parsedUrl = parse_url($text);
             if (isset($parsedUrl['host'])) {
@@ -67,7 +71,9 @@ class ApiKeyController extends Controller
             } else {
                 $host = $text;
             }
-            $output = shell_exec("nslookup " . escapeshellarg($host));
+            $command = "nslookup " . $host;
+            $output = [];
+            exec($command . " 2>&1", $output, $returnVar);
         }elseif($currentRouteUri == 'theHarvester'){
             $parsedUrl = parse_url($text);
             if (isset($parsedUrl['host'])) {
@@ -75,7 +81,9 @@ class ApiKeyController extends Controller
             } else {
                 $host = $text;
             }
-            $output = shell_exec("theHarvester -b bing,yahoo,rapiddns,crtsh -d  " . escapeshellarg($host));
+            $command = "theHarvester -b bing,yahoo,rapiddns,crtsh -d " . $host;
+            $output = [];
+            exec($command . " 2>&1", $output, $returnVar);
         }
         // For now, just return a success message
         return response()->json([$output]);
