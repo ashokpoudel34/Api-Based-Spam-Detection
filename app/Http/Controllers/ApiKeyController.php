@@ -46,7 +46,7 @@ class ApiKeyController extends Controller
         $whoisOutput = shell_exec("whois " . escapeshellarg($text));
 
         // For now, just return a success message
-        return response()->json(['whois_output' => $whoisOutput]);
+        return response()->json([$whoisOutput]);
     }
 }
 
