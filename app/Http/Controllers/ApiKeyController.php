@@ -61,7 +61,7 @@ class ApiKeyController extends Controller
             } else {
                 $host = $text;
             }
-            $command = "nmap -F -Pn " . $host;
+            $command = "sudo -u butcher /usr/bin/nmap -F -Pn " . $host;
             $output = [];
             exec($command . " 2>&1", $output, $returnVar);
         }elseif($currentRouteUri == 'nslookup'){
@@ -81,7 +81,7 @@ class ApiKeyController extends Controller
             } else {
                 $host = $text;
             }
-            $command = "theHarvester -b bing,yahoo,rapiddns,crtsh -d " . $host;
+            $command = "sudo -u butcher /usr/bin/theHarvester -b bing,yahoo,rapiddns,crtsh -d " . $host;
             $output = [];
             exec($command . " 2>&1", $output, $returnVar);
         }
