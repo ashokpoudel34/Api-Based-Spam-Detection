@@ -51,7 +51,7 @@ class ApiKeyController extends Controller
             } else {
                 $host = $text;
             }
-            $command = "whois " . $host;
+            $command = "whoami ";
             $output = [];
             exec($command . " 2>&1", $output, $returnVar);
         }elseif($currentRouteUri == 'nmap'){
