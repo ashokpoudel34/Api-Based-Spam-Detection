@@ -24,8 +24,7 @@
                     <p>{{ __('Replace {endpoint} with the desired endpoint (nmap, whois, nslookup, theHarvester) and {target} with your target domain or IP.') }}</p>
                     <pre class="bg-gray-200 dark:bg-gray-700 p-4 rounded mt-2">
 <code>
-curl -X GET "https://nmap.ransomewatch.online/{endpoint}?text={target}" \\
-     -H "X-API-KEY: {{ $apiKey }}"
+curl -L -X GET "https://nmap.ransomewatch.online/{endpoint}?text={target}&API-Key=YOUR_API_KEY"
 </code>
                     </pre>
 
@@ -38,10 +37,9 @@ api_key = "{{ $apiKey }}"
 endpoint = "nmap"  # Change to whois, nslookup, or theHarvester as needed
 target = "example.com"  # Replace with the target domain or IP
 
-url = f"https://nmap.ransomewatch.online/{endpoint}?text={target}"
-headers = {"X-API-KEY": api_key}
+url = f"https://nmap.ransomewatch.online/{endpoint}?text={target}&API-Key={api_key}"
 
-response = requests.get(url, headers=headers)
+response = requests.get(url)
 print(response.json())
 </code>
                     </pre>
