@@ -37,10 +37,18 @@ api_key = "{{ $apiKey }}"
 endpoint = "nmap"  # Change to whois, nslookup, or theHarvester as needed
 target = "example.com"  # Replace with the target domain or IP
 
-url = f"https://nmap.ransomewatch.online/{endpoint}?text={target}&API-Key={api_key}"
-
-response = requests.get(url)
-print(response.json())
+base_url = "https://nmap.ransomewatch.online"
+    url = f"{base_url}/{endpoint}"
+    params = {"API-Key": api_key, "text": target}
+    
+    print("\nSending request...")
+    response = requests.get(url, params=params)
+    
+    if response.status_code == 200:
+        print("\nResponse:")
+        print(response.json())
+    else:
+        print(f"\nError {response.status_code}: {response.text}")
 </code>
                     </pre>
                 </div>
