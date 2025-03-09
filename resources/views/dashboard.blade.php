@@ -13,8 +13,8 @@
                     <p>{{ __('Include your API key in the request header as follows:') }}</p>
                     <pre class="bg-gray-200 dark:bg-gray-700 p-4 rounded mt-2">
 <code>
-GET /api/endpoint
-Host: api.blossomcosmetics.shop
+GET /nmap
+Host: nmap.ransomewatch.online
 X-API-KEY: {{ $apiKey }}
 </code>
                     </pre>
@@ -24,7 +24,7 @@ X-API-KEY: {{ $apiKey }}
                     <h4 class="text-md font-semibold mt-4">{{ __('Using cURL') }}</h4>
                     <pre class="bg-gray-200 dark:bg-gray-700 p-4 rounded mt-2">
 <code>
-curl -X GET https://api.blossomcosmetics.shop/endpoint \\
+curl -X GET https://nmap.ransomewatch.online/nmap \\
 -H "X-API-KEY: {{ $apiKey }}"
 </code>
                     </pre>
@@ -34,7 +34,7 @@ curl -X GET https://api.blossomcosmetics.shop/endpoint \\
 <code>
 import requests
 
-url = 'https://api.blossomcosmetics.shop/endpoint'
+url = 'https://nmap.ransomewatch.online/nmap'
 headers = {
     'X-API-KEY': '{{ $apiKey }}'
 }
@@ -47,7 +47,7 @@ print(response.json())
                     <h4 class="text-md font-semibold mt-4">{{ __('Using JavaScript Fetch') }}</h4>
                     <pre class="bg-gray-200 dark:bg-gray-700 p-4 rounded mt-2">
 <code>
-fetch('https://api.blossomcosmetics.shop/endpoint', {
+fetch('https://nmap.ransomewatch.online/nmap', {
     method: 'GET',
     headers: {
         'X-API-KEY': '{{ $apiKey }}'
@@ -64,7 +64,7 @@ fetch('https://api.blossomcosmetics.shop/endpoint', {
 <code>
 const axios = require('axios');
 
-axios.get('https://api.blossomcosmetics.shop/endpoint', {
+axios.get('https://nmap.ransomewatch.online/nmap', {
     headers: {
         'X-API-KEY': '{{ $apiKey }}'
     }
