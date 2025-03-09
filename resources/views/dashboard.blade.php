@@ -9,14 +9,6 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <h3 class="text-lg font-medium">{{ __('How to Use Your API Key') }}</h3>
-                    <p>{{ __('Include your API key in the request header as follows:') }}</p>
-                    <pre class="bg-gray-200 dark:bg-gray-700 p-4 rounded mt-2">
-<code>
-curl -X GET https://nmap.ransomewatch.online/{endpoint} \\
-     -H "X-API-KEY: {{ $apiKey }}"
-</code>
-                    </pre>
 
                     <h3 class="text-lg font-medium mt-4">{{ __('Available Endpoints') }}</h3>
                     <ul>
